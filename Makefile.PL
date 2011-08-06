@@ -4,18 +4,18 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
   'ABSTRACT' => 'Paste to http://hpaste.org, the Haskell paste site',
-  'AUTHOR' => 'Dr Bean <drbean@freeshell.org>',
+  'AUTHOR' => 'Dr Bean <drbean at (@, the at mark) cpan dot (. a dot) org',
   'BUILD_REQUIRES' => {
     'Test::More' => '0'
   },
   'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+    'ExtUtils::MakeMaker' => '6.30'
   },
   'DISTNAME' => 'App-Nopaste-Service-Hpaste',
   'EXE_FILES' => [],
@@ -24,7 +24,7 @@ my %WriteMakefileArgs = (
   'PREREQ_PM' => {
     'App::Nopaste::Service' => '0'
   },
-  'VERSION' => '0.01',
+  'VERSION' => '0.02',
   'test' => {
     'TESTS' => 't/*.t'
   }

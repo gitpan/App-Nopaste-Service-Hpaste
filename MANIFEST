@@ -8,4 +8,3 @@ dist.ini~
 lib/App/Nopaste/Service/Hpaste.pm
 lib/App/Nopaste/Service/Hpaste.pm~
 t/000-load.t
-t/000-load.t~

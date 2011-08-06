@@ -1,7 +1,7 @@
 package App::Nopaste::Service::Hpaste;
 
 # Created: 西元2011年02月15日 19時51分40秒
-# Last Edit: 2011  2月 18, 12時07分30秒
+# Last Edit: 2011  8月 06, 16時49分43秒
 # $Id$
 
 
@@ -14,42 +14,55 @@ use base 'App::Nopaste::Service';
 
 my $code;
 my %Langs = (
-    "" => "0",
-    "Agda" => "1",
-    "Bash" => "2",
-    "C" => "3",
-    "C++" => "4",
-    "Common Lisp" => "5",
-    "D" => "6",
-    "Erlang" => "7",
-    "Haskell" => "8",
-    "Java" => "9",
-    "JavaScript" => "10",
-    "Literate Haskell" => "11",
-    "Lua" => "12",
-    "Objective-C" => "13",
-    "OCaml" => "14",
-    "Perl" => "15",
-    "Prolog" => "16",
-    "Python" => "17",
-    "Ruby" => "18",
-    "Scala" => "19",
-    "SQL" => "20",
-    "XML" => "21",
+    "" => "",
+    "Haskell" => "haskell",
+    "Agda" => "agda",
+    "ActionScript" => "actionscript",
+    "Bash/shell" => "bash",
+    "C" => "c",
+    "C++" => "cpp",
+    "Common Lisp" => "lisp",
+    "CSS" => "css",
+    "D" => "d",
+    "Diff" => "diff",
+    "Elisp" => "elisp",
+    "Erlang" => "erlang",
+    "Java" => "java",
+    "JavaScript" => "javascript",
+    "Literate Haskell" => "literatehaskell",
+    "Lua" => "lua",
+    "Objective-C" => "objectivec",
+    "OCaml" => "ocaml",
+    "Perl" => "perl",
+    "Prolog" => "prolog",
+    "Python" => "python",
+    "Ruby" => "ruby",
+    "Scala" => "scala",
+    "SQL" => "sql",
+    "TeX" => "tex",
+    "XML" => "xml",
 );
 my %langs = map { lc($_) => $Langs{$_} } keys %Langs;
 $code->{lang} = \%langs;
 
 $code->{chan} = {
-      "" => "0",
-      "agda" => "1",
-      "haskell" => "2",
-      "javascript" => "3",
-      "lisp" => "4",
-      "python" => "5",
-      "ruby" => "6",
-      "scala" => "7",
-      "xmonad" => "8",
+      "" => "",
+      "#haskell" => "#haskell",
+      "#xmonad" => "#xmonad",
+      "#javascript" => "#javascript",
+      "#python" => "#python",
+      "#ruby" => "#ruby",
+      "#lisp" => "#lisp",
+      "#scala" => "#scala",
+      "#agda" => "#agda",
+      "#coffeescript" => "#coffeescript",
+      "#arc" => "#arc",
+      "##c" => "##c",
+      "#clojure" => "#clojure",
+      "#scheme" => "#scheme",
+      "##prolog" => "##prolog",
+      "#emacs" => "#emacs",
+      "#hpaste" => "#hpaste",
 };
 
 sub uri { "http://hpaste.org/" }
@@ -69,11 +82,11 @@ sub fill_form {
     my $lang = $code->{lang}->{ (lc $args{lang}) || "haskell" };
     my $chan = $code->{chan}->{ $args{chan} || "" };
 
-    $mech->field( 'fval[1]'    => $title );
-    $mech->field( 'fval[2]'    => $args{nick} );
-    $mech->field( 'fval[3]'    => $lang );
-    $mech->field( 'fval[4]'    => $chan );
-    $mech->field( 'fval[5]'    => $args{text} );
+    $mech->field( 'title'    => $title );
+    $mech->field( 'author'    => $args{nick} );
+    $mech->field( 'language'    => $lang );
+    $mech->field( 'channel'    => $chan );
+    $mech->field( 'paste'    => $args{text} );
     $mech->click();
 }
 
@@ -106,7 +119,7 @@ App::Nopaste::Service::Hpaste
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -171,7 +184,7 @@ under the same terms as Perl itself.
 
 =head1 AUTHOR
 
-Dr Bean <drbean@freeshell.org>
+Dr Bean <drbean at (@, the at mark) cpan dot (. a dot) org
 
 =head1 COPYRIGHT AND LICENSE
 
