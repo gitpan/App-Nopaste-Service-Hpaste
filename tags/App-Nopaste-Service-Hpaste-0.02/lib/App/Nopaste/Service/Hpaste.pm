@@ -1,7 +1,7 @@
 package App::Nopaste::Service::Hpaste;
 
 # Created: 西元2011年02月15日 19時51分40秒
-# Last Edit: 2012 Jan 14, 09:16:28 PM
+# Last Edit: 2011  8月 06, 16時49分43秒
 # $Id$
 
 
@@ -17,10 +17,12 @@ my %Langs = (
     "" => "",
     "Haskell" => "haskell",
     "Agda" => "agda",
+    "ActionScript" => "actionscript",
     "Bash/shell" => "bash",
     "C" => "c",
     "C++" => "cpp",
     "Common Lisp" => "lisp",
+    "CSS" => "css",
     "D" => "d",
     "Diff" => "diff",
     "Elisp" => "elisp",
@@ -38,28 +40,29 @@ my %Langs = (
     "Scala" => "scala",
     "SQL" => "sql",
     "TeX" => "tex",
+    "XML" => "xml",
 );
 my %langs = map { lc($_) => $Langs{$_} } keys %Langs;
 $code->{lang} = \%langs;
 
 $code->{chan} = {
       "" => "",
-      "haskell" => "#haskell",
-      "xmonad" => "#xmonad",
-      "javascript" => "#javascript",
-      "python" => "#python",
-      "ruby" => "#ruby",
-      "lisp" => "#lisp",
-      "scala" => "#scala",
-      "agda" => "#agda",
-      "coffeescript" => "#coffeescript",
-      "arc" => "#arc",
-      "c" => "##c",
-      "clojure" => "#clojure",
-      "scheme" => "#scheme",
-      "prolog" => "##prolog",
-      "emacs" => "#emacs",
-      "hpaste" => "#hpaste",
+      "#haskell" => "#haskell",
+      "#xmonad" => "#xmonad",
+      "#javascript" => "#javascript",
+      "#python" => "#python",
+      "#ruby" => "#ruby",
+      "#lisp" => "#lisp",
+      "#scala" => "#scala",
+      "#agda" => "#agda",
+      "#coffeescript" => "#coffeescript",
+      "#arc" => "#arc",
+      "##c" => "##c",
+      "#clojure" => "#clojure",
+      "#scheme" => "#scheme",
+      "##prolog" => "##prolog",
+      "#emacs" => "#emacs",
+      "#hpaste" => "#hpaste",
 };
 
 sub uri { "http://hpaste.org/" }
@@ -116,7 +119,7 @@ App::Nopaste::Service::Hpaste
 
 =head1 VERSION
 
-version 0.03
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -181,11 +184,11 @@ under the same terms as Perl itself.
 
 =head1 AUTHOR
 
-"Dr Bean"
+Dr Bean <drbean at (@, the at mark) cpan dot (. a dot) org
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by "Dr Bean".
+This software is copyright (c) 2011 by Dr Bean.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

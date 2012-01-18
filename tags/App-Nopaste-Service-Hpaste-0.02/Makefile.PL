@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker 6.30;
 
 my %WriteMakefileArgs = (
   'ABSTRACT' => 'Paste to http://hpaste.org, the Haskell paste site',
-  'AUTHOR' => '"Dr Bean"',
+  'AUTHOR' => 'Dr Bean <drbean at (@, the at mark) cpan dot (. a dot) org',
   'BUILD_REQUIRES' => {
     'Test::More' => '0'
   },
@@ -24,7 +24,7 @@ my %WriteMakefileArgs = (
   'PREREQ_PM' => {
     'App::Nopaste::Service' => '0'
   },
-  'VERSION' => '0.03',
+  'VERSION' => '0.02',
   'test' => {
     'TESTS' => 't/*.t'
   }

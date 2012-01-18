@@ -1,7 +1,7 @@
 ---
 abstract: 'Paste to http://hpaste.org, the Haskell paste site'
 author:
-  - "\"Dr Bean\""
+  - 'Dr Bean <drbean at (@, the at mark) cpan dot (. a dot) org'
 build_requires:
   Test::More: 0
 configure_requires:
@@ -18,4 +18,4 @@ requires:
 resources:
   homepage: http://search.cpan.org/dist/App-Nopaste-Service-Hpaste/
   repository: http://svn.openfoundry.org/nopaste-hpaste
-version: 0.03
+version: 0.02
