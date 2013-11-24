@@ -9,24 +9,27 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Paste to http://hpaste.org, the Haskell paste site',
-  'AUTHOR' => '"Dr Bean"',
-  'BUILD_REQUIRES' => {
-    'Test::More' => '0'
+  "ABSTRACT" => "Paste to http://hpaste.org, the Haskell paste site",
+  "AUTHOR" => "\"Dr Bean\"",
+  "BUILD_REQUIRES" => {
+    "Test::More" => 0
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'App-Nopaste-Service-Hpaste',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'App::Nopaste::Service::Hpaste',
-  'PREREQ_PM' => {
-    'App::Nopaste::Service' => '0'
+  "DISTNAME" => "App-Nopaste-Service-Hpaste",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "App::Nopaste::Service::Hpaste",
+  "PREREQ_PM" => {
+    "App::Nopaste::Service" => 0,
+    "base" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  'VERSION' => '0.03',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.04",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

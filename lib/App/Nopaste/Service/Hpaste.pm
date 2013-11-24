@@ -1,14 +1,29 @@
 package App::Nopaste::Service::Hpaste;
 
 # Created: 西元2011年02月15日 19時51分40秒
-# Last Edit: 2012 Jan 14, 09:16:28 PM
+# Last Edit: 2013 Nov 19, 05:15:30 PM
 # $Id$
 
+=head1 NAME
+
+Hpaste.pm - Paste to http://hpaste.org, the Haskell paste site
+
+=cut
 
 use strict;
 use warnings;
 
+=head1 SYNOPSIS
 
+nopaste -s Hpaste -l haskell -n "Dr Bean" -d "Category theory" paste.txt
+
+=cut
+
+=head1 DESCRIPTION
+
+hpaste requires a title, an author, and the paste. The default language is 'haskell.' No, it's 'perl', but it should be 'haskell'.
+
+=cut
 
 use base 'App::Nopaste::Service';
 
@@ -62,7 +77,7 @@ $code->{chan} = {
       "hpaste" => "#hpaste",
 };
 
-sub uri { "http://hpaste.org/" }
+sub uri { "http://lpaste.net/" }
 
 sub fill_form {
     my $self = shift;
@@ -100,35 +115,6 @@ sub return {
 1;
 
 
-
-
-1;    # End of /home/drbean/hpaste/lib/App/Nopaste/ServiceHpaste.pm
-
-# vim: set ts=8 sts=4 sw=4 noet:
-
-
-__END__
-=pod
-
-=head1 NAME
-
-App::Nopaste::Service::Hpaste
-
-=head1 VERSION
-
-version 0.03
-
-=head1 SYNOPSIS
-
-nopaste -s Hpaste -l haskell -n "Dr Bean" -d "Category theory" paste.txt
-
-=head1 DESCRIPTION
-
-hpaste requires a title, an author, and the paste. The default language is 'haskell.' No, it's 'perl', but it should be 'haskell'.
-
-=head1 NAME
-
-Hpaste.pm - Paste to http://hpaste.org, the Haskell paste site
 
 =head1 AUTHOR
 
@@ -179,16 +165,9 @@ Copyright 2011 Dr Bean, all rights reserved.
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
-=head1 AUTHOR
-
-"Dr Bean"
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2012 by "Dr Bean".
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
-
 =cut
+
+1;    # End of /home/drbean/hpaste/lib/App/Nopaste/ServiceHpaste.pm
+
+# vim: set ts=8 sts=4 sw=4 noet:
 

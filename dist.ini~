@@ -1,8 +1,7 @@
 name = App-Nopaste-Service-Hpaste
 abstract = Paste to http://hpaste.org, the Haskell paste site
-author = Dr Bean <drbean at (@, the at mark) cpan dot (. a dot) org
-license = Perl_5
-version = 0.02
+version = 0.03
+copyright_holder = "Dr Bean"
 
 ; [@Basic]
 [GatherDir]
@@ -15,18 +14,18 @@ version = 0.02
 
 [AutoPrereqs]
 
-[PodWeaver]
+; [PodWeaver]
 [MakeMaker]
 [Manifest]
 
-; [@SVK]
-[SVK::Check]
-allow_dirty = App-Nopaste-Service-Hpaste-*
-[SVK::Commit]
-[SVK::Tag]
-project = nopaste-hpaste
-[SVK::Push]
-push_to = /paste/
+; ; [@SVK]
+; [SVK::Check]
+; allow_dirty = App-Nopaste-Service-Hpaste-0.03
+; [SVK::Commit]
+; [SVK::Tag]
+; project = nopaste-hpaste
+; [SVK::Push]
+; push_to = //mi
 
 ; [FakeRelease]
 ; [TestRelease]

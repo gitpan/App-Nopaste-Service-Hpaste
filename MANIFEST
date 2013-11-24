@@ -14,9 +14,7 @@ tags/App-Nopaste-Service-Hpaste-0.02/META.yml
 tags/App-Nopaste-Service-Hpaste-0.02/Makefile.PL
 tags/App-Nopaste-Service-Hpaste-0.02/README
 tags/App-Nopaste-Service-Hpaste-0.02/dist.ini
-tags/App-Nopaste-Service-Hpaste-0.02/dist.ini~
 tags/App-Nopaste-Service-Hpaste-0.02/lib/App/Nopaste/Service/Hpaste.pm
-tags/App-Nopaste-Service-Hpaste-0.02/lib/App/Nopaste/Service/Hpaste.pm~
 tags/App-Nopaste-Service-Hpaste-0.02/t/000-load.t
 tags/v0.02/dist.ini
 tags/v0.02/lib/App/Nopaste/Service/Hpaste.pm
